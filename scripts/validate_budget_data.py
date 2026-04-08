@@ -2,10 +2,11 @@
 """Validate cleaned CT budget data for completeness and consistency."""
 
 import argparse
+import csv
 import json
 from collections import Counter
 from pathlib import Path
-from typing import Any, Dict, Iterable, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 PROBLEM_SAMPLE_LIMIT = 5
 
@@ -19,23 +20,12 @@ def load_ndjson(path: Path) -> Iterable[Dict[str, Any]]:
             yield json.loads(line)
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Validate the cleaned CT budget dataset.")
-    parser.add_argument(
-        "--input",
-        default="data/processed/clean_budget.ndjson",
-        help="Path to the cleaned NDJSON file",
-    )
-    args = parser.parse_args()
-    path = Path(args.input).expanduser()
-    if not path.exists():
-        raise FileNotFoundError(f"Input file not found: {path}")
-
+def analyze_dataset(path: Path) -> Dict[str, Any]:
     total = 0
     missing_description = 0
     missing_amount = 0
     duplicate_counter: Counter[Tuple[Any, ...]] = Counter()
-    problem_rows = []
+    problem_rows: List[Dict[str, Any]] = []
 
     for row in load_ndjson(path):
         total += 1
@@ -45,6 +35,7 @@ def main() -> None:
             row.get("line_item"),
             row.get("value_label"),
             row.get("fiscal_year"),
+            round(float(row.get("amount", 0.0)), 2) if isinstance(row.get("amount"), (int, float)) else None,
         )
         duplicate_counter[key] += 1
         description = (row.get("description") or "").strip()
@@ -58,35 +49,116 @@ def main() -> None:
             if len(problem_rows) < PROBLEM_SAMPLE_LIMIT:
                 problem_rows.append({"issue": "missing amount", "row": row})
 
-    duplicates = {k: c for k, c in duplicate_counter.items() if c > 1}
+    duplicates = [(k, c) for k, c in duplicate_counter.items() if c > 1]
+    duplicates.sort(key=lambda item: item[1], reverse=True)
 
-    if total == 0:
-        print("No rows found in the dataset.")
-        return
+    pct_missing_desc = (missing_description / total * 100) if total else 0.0
+    pct_missing_amount = (missing_amount / total * 100) if total else 0.0
 
-    pct_missing_desc = (missing_description / total) * 100
-    pct_missing_amount = (missing_amount / total) * 100
+    return {
+        "total": total,
+        "missing_description": missing_description,
+        "missing_amount": missing_amount,
+        "pct_missing_desc": pct_missing_desc,
+        "pct_missing_amount": pct_missing_amount,
+        "duplicates": duplicates,
+        "problem_rows": problem_rows[:PROBLEM_SAMPLE_LIMIT],
+    }
 
-    print("Validation summary")
-    print("-------------------")
-    print(f"Rows analysed: {total:,}")
-    print(f"Missing description: {missing_description:,} ({pct_missing_desc:.2f}% )")
-    print(f"Missing amount: {missing_amount:,} ({pct_missing_amount:.2f}% )")
-    print(f"Duplicate logical rows: {len(duplicates):,}")
 
-    if duplicates:
-        top_dups = list(duplicates.items())[:5]
-        print("\nSample duplicates (first 5):")
-        for key, count in top_dups:
+def load_audit_rows(path: Optional[Path], limit: int = 5) -> List[Dict[str, str]]:
+    if not path or not path.exists():
+        return []
+    rows: List[Dict[str, str]] = []
+    with path.open("r", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            if row.get("action") == "merged":
+                rows.append(row)
+            if len(rows) >= limit:
+                break
+    return rows
+
+
+def print_summary(label: str, metrics: Dict[str, Any]) -> None:
+    print(label)
+    print("-" * len(label))
+    print(f"Rows analysed: {metrics['total']:,}")
+    print(
+        f"Missing description: {metrics['missing_description']:,} ({metrics['pct_missing_desc']:.2f}%)"
+    )
+    print(f"Missing amount: {metrics['missing_amount']:,} ({metrics['pct_missing_amount']:.2f}%)")
+    print(f"Duplicate logical rows: {len(metrics['duplicates']):,}")
+    if metrics["duplicates"]:
+        print("Top duplicate keys (up to 5):")
+        for key, count in metrics["duplicates"][:5]:
             print(f"  {key} -> {count} rows")
-
-    if problem_rows:
-        print("\nExample problematic rows:")
-        for sample in problem_rows[:PROBLEM_SAMPLE_LIMIT]:
+    if metrics["problem_rows"]:
+        print("Example problematic rows:")
+        for sample in metrics["problem_rows"]:
             print(f"  Issue: {sample['issue']}")
             print(f"    Row: {json.dumps(sample['row'], ensure_ascii=False)}")
+    print()
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Validate the cleaned or deduplicated CT budget dataset.")
+    parser.add_argument(
+        "--input",
+        default="data/processed/clean_budget.ndjson",
+        help="Path to the primary NDJSON file to validate",
+    )
+    parser.add_argument(
+        "--baseline",
+        help="Optional baseline NDJSON (e.g., pre-deduped) to compare row counts against",
+    )
+    parser.add_argument(
+        "--audit",
+        help="Optional audit CSV from the deduplication step for reporting sample merges",
+    )
+    args = parser.parse_args()
+
+    input_path = Path(args.input).expanduser()
+    if not input_path.exists():
+        raise FileNotFoundError(f"Input file not found: {input_path}")
+
+    current_metrics = analyze_dataset(input_path)
+    baseline_metrics = None
+    if args.baseline:
+        baseline_path = Path(args.baseline).expanduser()
+        if not baseline_path.exists():
+            raise FileNotFoundError(f"Baseline file not found: {baseline_path}")
+        baseline_metrics = analyze_dataset(baseline_path)
+
+    print_summary("Validation summary (target dataset)", current_metrics)
+
+    if baseline_metrics:
+        print_summary("Validation summary (baseline dataset)", baseline_metrics)
+        removed = baseline_metrics["total"] - current_metrics["total"]
+        pct_reduction = (removed / baseline_metrics["total"] * 100) if baseline_metrics["total"] else 0.0
+        print("Comparison against baseline")
+        print("---------------------------")
+        print(f"Baseline rows: {baseline_metrics['total']:,}")
+        print(f"Target rows: {current_metrics['total']:,}")
+        print(f"Rows removed: {removed:,} ({pct_reduction:.2f}%)")
+        print()
+
+    audit_rows = load_audit_rows(Path(args.audit).expanduser() if args.audit else None)
+    if audit_rows:
+        print("Sample merged groups from audit (first 5):")
+        for row in audit_rows:
+            print(
+                f"  #{row['group_id']} {row['reason']} {row['merged_rows']} rows -> {row['agency']} | {row['line_item']} | {row['value_label']} | pages {row['pages']}"
+            )
+            if row.get("notes"):
+                print(f"    Notes: {row['notes']}")
+        print()
+
+    remaining_duplicates = len(current_metrics["duplicates"])
+    if remaining_duplicates:
+        print(f"Remaining duplicate patterns to investigate: {remaining_duplicates}")
     else:
-        print("\nNo problematic rows detected based on the configured checks.")
+        print("No remaining duplicate patterns detected within the configured key.")
 
 
 if __name__ == "__main__":
