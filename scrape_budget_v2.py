@@ -167,7 +167,7 @@ def table_numeric_density(df: pd.DataFrame) -> float:
     total = s.size
     if total == 0:
         return 0.0
-    digit_cells = s.applymap(lambda x: bool(RE_HAS_DIGIT.search(x))).values.sum()
+    digit_cells = s.stack().str.contains(RE_HAS_DIGIT).sum()
     return float(digit_cells) / float(total)
 
 
@@ -183,7 +183,12 @@ def header_fragmentation_score(columns: List[str]) -> float:
     return short / max(1, len(columns))
 
 
-def looks_like_real_table(df: pd.DataFrame) -> bool:
+def looks_like_real_table(
+    df: pd.DataFrame,
+    *,
+    min_digit_density: float = 0.08,
+    max_header_fragmentation: float = 0.50,
+) -> bool:
     """
     Conservative filter: reject paragraph-text hallucinated as tables.
     Tuned for budget documents where real tables are numeric-heavy.
@@ -198,11 +203,11 @@ def looks_like_real_table(df: pd.DataFrame) -> bool:
         return False
 
     # Budget tables should have some numeric density
-    if table_numeric_density(df) < 0.08:
+    if table_numeric_density(df) < min_digit_density:
         return False
 
     # Chopped headers tend to be many tiny fragments
-    if cols >= 6 and header_fragmentation_score(list(df.columns)) > 0.50:
+    if cols >= 6 and header_fragmentation_score(list(df.columns)) > max_header_fragmentation:
         return False
 
     return True
@@ -212,7 +217,12 @@ def looks_like_real_table(df: pd.DataFrame) -> bool:
 # Optional "skip non-table pages" heuristic
 # -------------------------
 
-def looks_like_table_page(page: pdfplumber.page.Page, sample_band_top: float = 140) -> bool:
+def looks_like_table_page(
+    page: pdfplumber.page.Page,
+    *,
+    sample_band_top: float = 140,
+    min_digits: int = 40,
+) -> bool:
     """
     Conservative heuristic to skip pages unlikely to contain tables:
     if the body contains very few digits, it’s likely narrative/dividers.
@@ -225,7 +235,7 @@ def looks_like_table_page(page: pdfplumber.page.Page, sample_band_top: float = 1
         return False
 
     digits = sum(ch.isdigit() for ch in text)
-    return digits >= 40
+    return digits >= min_digits
 
 
 # -------------------------
@@ -312,6 +322,9 @@ def scrape_budget(
     ndjson: bool = False,
     skip_non_table_pages: bool = False,
     header_height: float = 120,
+    min_digit_density: float = 0.08,
+    max_header_fragmentation: float = 0.50,
+    min_table_page_digits: int = 40,
     progress_every: int = 10,
 ) -> None:
     """
@@ -340,16 +353,84 @@ def scrape_budget(
         "text_y_tolerance": 2,
     }
 
-    if ndjson:
-        out_f = output_path.open("w", encoding="utf-8")
-    else:
+    if not ndjson:
         structured: Dict[str, Dict[str, Dict[str, Any]]] = {}
 
     with pdfplumber.open(str(pdf_path)) as pdf:
         last_agency = "General Fund / Statewide"
 
+        if ndjson:
+            with output_path.open("w", encoding="utf-8") as out_f:
+                for i, page in enumerate(pdf.pages):
+                    if skip_non_table_pages and not looks_like_table_page(
+                        page,
+                        min_digits=min_table_page_digits,
+                    ):
+                        if (i + 1) % progress_every == 0:
+                            print(f"Skipped (heuristic) {i+1} pages...")
+                        continue
+
+                    agency, section = detect_metadata_from_header(page, header_height=header_height)
+                    if agency == "Unknown Agency":
+                        agency = last_agency
+                    else:
+                        last_agency = agency
+
+            # Extract narrative policy blocks safely (not as tables)
+                    policy_blocks = extract_policy_blocks(page)
+
+            # Extract tables (two-pass)
+                    tables = page.extract_tables(table_settings_lines) or []
+                    if not tables:
+                        tables = page.extract_tables(table_settings_text) or []
+
+                    if not tables:
+                        if (i + 1) % progress_every == 0:
+                            print(f"Processed {i+1} pages (no tables)...")
+                        continue
+
+                    for table in tables:
+                        df = normalize_table_to_dataframe(table)
+                        if df is None:
+                            continue
+
+                        # Filter out paragraph-text hallucinated as tables
+                        if not looks_like_real_table(
+                            df,
+                            min_digit_density=min_digit_density,
+                            max_header_fragmentation=max_header_fragmentation,
+                        ):
+                            continue
+
+                        # Clean columns (vectorized numeric where appropriate)
+                        for col in list(df.columns):
+                            if is_numeric_column(col, df[col]):
+                                df[col] = clean_numeric_series(df[col])
+                            else:
+                                df[col] = df[col].map(clean_text)
+
+                        records = df.to_dict(orient="records")
+
+                        for r in records:
+                            out_obj = {
+                                "agency": agency,
+                                "section": section,
+                                "page": i + 1,
+                                "row": r,
+                                **policy_blocks,
+                            }
+                            out_f.write(json.dumps(out_obj, ensure_ascii=False) + "\n")
+
+                    if (i + 1) % progress_every == 0:
+                        print(f"Validated and processed {i+1} pages...")
+            print(f"Success. NDJSON exported to {output_path}")
+            return
+
         for i, page in enumerate(pdf.pages):
-            if skip_non_table_pages and not looks_like_table_page(page):
+            if skip_non_table_pages and not looks_like_table_page(
+                page,
+                min_digits=min_table_page_digits,
+            ):
                 if (i + 1) % progress_every == 0:
                     print(f"Skipped (heuristic) {i+1} pages...")
                 continue
@@ -370,7 +451,7 @@ def scrape_budget(
 
             if not tables:
                 # Still store notes (optional) even if no tables
-                if (not ndjson) and policy_blocks:
+                if policy_blocks:
                     structured.setdefault(agency, {}).setdefault(section, {}).setdefault("notes", [])
                     structured[agency][section]["notes"].append({"page": i + 1, **policy_blocks})
 
@@ -384,7 +465,11 @@ def scrape_budget(
                     continue
 
                 # Filter out paragraph-text hallucinated as tables
-                if not looks_like_real_table(df):
+                if not looks_like_real_table(
+                    df,
+                    min_digit_density=min_digit_density,
+                    max_header_fragmentation=max_header_fragmentation,
+                ):
                     continue
 
                 # Clean columns (vectorized numeric where appropriate)
@@ -396,29 +481,13 @@ def scrape_budget(
 
                 records = df.to_dict(orient="records")
 
-                if ndjson:
-                    for r in records:
-                        out_obj = {
-                            "agency": agency,
-                            "section": section,
-                            "page": i + 1,
-                            "row": r,
-                            **policy_blocks,
-                        }
-                        out_f.write(json.dumps(out_obj, ensure_ascii=False) + "\n")
-                else:
-                    structured.setdefault(agency, {}).setdefault(section, {}).setdefault("tables", []).extend(records)
-                    if policy_blocks:
-                        structured[agency][section].setdefault("notes", [])
-                        structured[agency][section]["notes"].append({"page": i + 1, **policy_blocks})
+                structured.setdefault(agency, {}).setdefault(section, {}).setdefault("tables", []).extend(records)
+                if policy_blocks:
+                    structured[agency][section].setdefault("notes", [])
+                    structured[agency][section]["notes"].append({"page": i + 1, **policy_blocks})
 
             if (i + 1) % progress_every == 0:
                 print(f"Validated and processed {i+1} pages...")
-
-    if ndjson:
-        out_f.close()
-        print(f"Success. NDJSON exported to {output_path}")
-        return
 
     with output_path.open("w", encoding="utf-8") as f:
         if pretty:
@@ -442,6 +511,12 @@ def build_argparser() -> argparse.ArgumentParser:
     p.add_argument("--skip-non-table-pages", action="store_true",
                    help="Heuristic skip pages unlikely to contain tables (faster, small risk of skipping)")
     p.add_argument("--header-height", type=float, default=120, help="Header crop height for metadata scan")
+    p.add_argument("--min-digit-density", type=float, default=0.08,
+                   help="Minimum fraction of digit-containing cells to accept a table")
+    p.add_argument("--max-header-fragmentation", type=float, default=0.50,
+                   help="Maximum fraction of very short headers before rejecting a table")
+    p.add_argument("--min-table-page-digits", type=int, default=40,
+                   help="Minimum digits in page body to consider it table-like")
     p.add_argument("--progress-every", type=int, default=10, help="Progress print interval (pages)")
     return p
 
@@ -458,6 +533,9 @@ def main() -> None:
         ndjson=args.ndjson,
         skip_non_table_pages=args.skip_non_table_pages,
         header_height=args.header_height,
+        min_digit_density=args.min_digit_density,
+        max_header_fragmentation=args.max_header_fragmentation,
+        min_table_page_digits=args.min_table_page_digits,
         progress_every=max(1, args.progress_every),
     )
 
