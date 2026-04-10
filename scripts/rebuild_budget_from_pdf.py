@@ -100,6 +100,7 @@ def clean_agency_name(text: str | None) -> Optional[str]:
     if not text:
         return None
 
+    text = normalize_page_text(text)
     agency_code_map = {
         "OLM10000": "Office Of Legislative Management",
         "APA11000": "Auditors Of Public Accounts",
@@ -113,12 +114,15 @@ def clean_agency_name(text: str | None) -> Optional[str]:
     junk_labels = [
         "Summary",
         "Part II. Appropriations",
+        "Part I. Overview",
+        "Totals",
+        "Permanent Full-Time Positions",
         "Subcommittees: Table Of Contents",
         "General Government A",
+        "General Government B",
     ]
 
     # Normalize unicode punctuation noise first
-    text = text.replace("â€™", "'")
     text = normalize_whitespace(text)
     if not text:
         return None
@@ -137,6 +141,17 @@ def clean_agency_name(text: str | None) -> Optional[str]:
     for label in junk_labels:
         text = re.sub(rf"\b{re.escape(label)}\b", "", text, flags=re.IGNORECASE)
         text = normalize_whitespace(text)
+
+    # Remove leading/trailing section labels like "General Government B" that cling to agencies
+    text = re.sub(r"^(General Government [AB])\b[:,-]?\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\b(General Government [AB])$", "", text, flags=re.IGNORECASE)
+    text = normalize_whitespace(text)
+
+    # Remove trailing standalone "Legislative" noise
+    if re.search(r"\s+Legislative\.?$", text, flags=re.IGNORECASE):
+        if not text.lower().endswith("legislative management"):
+            text = re.sub(r"\s+Legislative\.?$", "", text, flags=re.IGNORECASE)
+            text = normalize_whitespace(text)
 
     # De-dupe consecutive words (case-insensitive)
     words = text.split()
@@ -193,6 +208,25 @@ JUNK_AGENCY_LABELS = {
     "subcommittees: table of contents",
 }
 
+TOC_DOT_LEADER_RE = re.compile(r"\.{3,}\s*\d+$")
+PART_HEADING_RE = re.compile(r"^part\s+[ivxlcdm]+\b", re.IGNORECASE)
+SECTION_LABEL_RE = re.compile(r"^general government [ab]\b", re.IGNORECASE)
+TABLE_HEADING_KEYWORDS = {
+    "permanent full-time positions",
+    "permanent full time positions",
+    "permanent full-time position",
+    "permanent full time position",
+    "totals",
+    "total",
+}
+HEADING_KEYWORD_SUBSTRINGS = (
+    "appropriations changes",
+    "table of contents",
+    "overview",
+    "subcommittee",
+    "positions",
+)
+
 
 def _dedupe_words_ci(text: str) -> str:
     words = text.split()
@@ -213,6 +247,17 @@ def detect_agency(text: str) -> Optional[str]:
         deduped = _dedupe_words_ci(line).lower()
         if deduped in JUNK_AGENCY_LABELS:
             return False
+        if TOC_DOT_LEADER_RE.search(line):
+            return False
+        if PART_HEADING_RE.match(lowered):
+            return False
+        if SECTION_LABEL_RE.match(lowered) and len(line.split()) <= 3:
+            return False
+        if lowered in TABLE_HEADING_KEYWORDS:
+            return False
+        if any(keyword in lowered for keyword in HEADING_KEYWORD_SUBSTRINGS):
+            if line.isupper() or lowered.startswith("part"):
+                return False
         compact = re.sub(r"\s+", "", line)
         if re.fullmatch(r"[A-Z]{2,4}\d{4,6}", compact, flags=re.IGNORECASE):
             return False
