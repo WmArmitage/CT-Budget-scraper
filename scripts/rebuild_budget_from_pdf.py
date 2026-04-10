@@ -144,11 +144,10 @@ def detect_agency(text: str) -> Optional[str]:
 
 
 def classify_page(page_num: int, text: str) -> PageClassification:
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
     lowered = text.lower()
-    
-    agency = clean_agency_name(detect_agency(lines))
-    subcommittee = detect_subcommittee(lines)
+
+    agency = clean_agency_name(detect_agency(text))
+    subcommittee = detect_subcommittee(text)
     confidence = 0.2
 
     if "policy" in lowered and "change" in lowered:
@@ -165,7 +164,7 @@ def classify_page(page_num: int, text: str) -> PageClassification:
         confidence = 0.3
 
     return PageClassification(
-        page_number=page_number,
+        page_number=page_num,
         page_type=page_type,
         subcommittee=subcommittee,
         agency=agency,
