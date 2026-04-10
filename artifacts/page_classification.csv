@@ -1,0 +1,344 @@
+page_number,page_type,subcommittee,agency,confidence
+18,narrative,Transportation,Special Transportation Fund,0.3
+19,policy_changes,General Government,Part Ii. Appropriations,0.9
+20,subcommittee_summary,General Government,Subcommittees: Table Of Contents,0.85
+21,narrative,,Legislative Summary,0.3
+22,agency_detail,,Olm10000,0.8
+23,narrative,Higher Education,Legislative Management Legislative,0.3
+24,narrative,,Legislative Legislative Management,0.3
+25,narrative,Higher Education,Legislative Management Legislative,0.3
+26,narrative,,Legislative Legislative Management,0.3
+27,agency_detail,,Apa11000,0.8
+28,agency_detail,,Legislative Auditors Of Public Accounts,0.8
+29,agency_detail,,Cwe11980,0.8
+30,agency_detail,,"Legislative Commission On Women, Children, Seniors, Equity And Opportunity",0.8
+31,agency_detail,General Government,General Government A Summary,0.8
+32,agency_detail,General Government,Gov12000,0.8
+33,narrative,General Government,Governor’S Office General Government A,0.3
+34,agency_detail,General Government,Sos12500,0.8
+35,agency_detail,General Government,Secretary Of The State General Government A,0.8
+36,agency_detail,General Government,General Government A Secretary Of The State,0.8
+37,agency_detail,General Government,Secretary Of The State General Government A,0.8
+38,agency_detail,General Government,Lgo13000,0.8
+39,narrative,General Government,Lieutenant Governor’S Office General Government A,0.3
+40,agency_detail,General Government,Ele13500,0.8
+41,narrative,General Government,Elections Enforcement Commission General Government A,0.3
+42,agency_detail,General Government,Eth13600,0.8
+43,narrative,General Government,Office Of State Ethics General Government A,0.3
+44,agency_detail,General Government,Foi13700,0.8
+45,agency_detail,General Government,Oga17000,0.8
+46,agency_detail,General Government,General Government A Office Of Governmental Accountability,0.8
+47,agency_detail,General Government,Office Of Governmental Accountability General Government A,0.8
+48,agency_detail,General Government,General Government A Office Of Governmental Accountability,0.8
+49,narrative,General Government,General Government B Summary,0.3
+50,policy_changes,General Government,Summary General Government B,0.9
+51,narrative,General Government,General Government B Summary,0.3
+52,agency_detail,General Government,Ott14000,0.8
+53,narrative,General Government,State Treasurer General Government B,0.3
+54,policy_changes,General Government,Ott14100,0.9
+55,policy_changes,General Government,Debt Service - State Treasurer General Government B,0.9
+56,agency_detail,General Government,Osc15000,0.8
+57,agency_detail,General Government,State Comptroller General Government B,0.8
+58,agency_detail,General Government,General Government B State Comptroller,0.8
+59,agency_detail,General Government,Osc15100,0.8
+60,narrative,General Government,General Government B State Comptroller - Miscellaneous,0.3
+61,narrative,General Government,State Comptroller - Miscellaneous General Government B,0.3
+62,agency_detail,General Government,Osc15200,0.8
+63,narrative,General Government,State Comptroller - Fringe Benefits General Government B,0.3
+64,agency_detail,General Government,General Government B State Comptroller - Fringe Benefits,0.8
+65,narrative,General Government,State Comptroller - Fringe Benefits General Government B,0.3
+66,narrative,General Government,General Government B State Comptroller - Fringe Benefits,0.3
+67,policy_changes,General Government,State Comptroller - Fringe Benefits General Government B,0.9
+68,agency_detail,General Government,Drs16000,0.8
+69,agency_detail,General Government,Department Of Revenue Services General Government B,0.8
+70,agency_detail,General Government,General Government B Department Of Revenue Services,0.8
+71,agency_detail,General Government,Opm20000,0.8
+72,narrative,General Government,General Government B Office Of Policy And Management,0.3
+73,narrative,General Government,Office Of Policy And Management General Government B,0.3
+74,policy_changes,General Government,General Government B Office Of Policy And Management,0.9
+75,narrative,General Government,Office Of Policy And Management General Government B,0.3
+76,policy_changes,General Government,General Government B Office Of Policy And Management,0.9
+77,policy_changes,General Government,Office Of Policy And Management General Government B,0.9
+78,agency_detail,General Government,General Government B Office Of Policy And Management,0.8
+79,agency_detail,General Government,Opm20100,0.8
+80,narrative,General Government,General Government B Reserve For Salary Adjustments,0.3
+81,agency_detail,General Government,Das23000,0.8
+82,agency_detail,General Government,General Government B Department Of Administrative Services,0.8
+83,agency_detail,General Government,Department Of Administrative Services General Government B,0.8
+84,agency_detail,General Government,General Government B Department Of Administrative Services,0.8
+85,agency_detail,General Government,Department Of Administrative Services General Government B,0.8
+86,narrative,General Government,General Government B Department Of Administrative Services,0.3
+87,agency_detail,General Government,Department Of Administrative Services General Government B,0.8
+88,agency_detail,General Government,Das23100,0.8
+89,narrative,General Government,Workers’ Compensation Claims - Administrative Services General Government B,0.3
+90,agency_detail,General Government,Oag29000,0.8
+91,agency_detail,General Government,Attorney General General Government B,0.8
+92,agency_detail,General Government,General Government B Attorney General,0.8
+93,agency_detail,Regulation And Protection,Regulation And Protection Summary,0.8
+94,agency_detail,Regulation And Protection,Dps32000,0.8
+95,agency_detail,Regulation And Protection,Department Of Emergency Services And Public Protection Regulation And Protection,0.8
+96,agency_detail,Regulation And Protection,Regulation And Protection Department Of Emergency Services And Public Protection,0.8
+97,narrative,Regulation And Protection,Department Of Emergency Services And Public Protection Regulation And Protection,0.3
+98,agency_detail,Regulation And Protection,Regulation And Protection Department Of Emergency Services And Public Protection,0.8
+99,agency_detail,Regulation And Protection,Dob37000,0.8
+100,narrative,Regulation And Protection,Regulation And Protection Department Of Banking,0.3
+101,agency_detail,Regulation And Protection,Department Of Banking Regulation And Protection,0.8
+102,agency_detail,Regulation And Protection,Doi37500,0.8
+103,narrative,Regulation And Protection,Insurance Department Regulation And Protection,0.3
+104,agency_detail,Regulation And Protection,Obh39300,0.8
+105,agency_detail,Regulation And Protection,Office Of The Behavioral Health Advocate Regulation And Protection,0.8
+106,agency_detail,Regulation And Protection,Mco39400,0.8
+107,narrative,Regulation And Protection,Office Of The Healthcare Advocate Regulation And Protection,0.3
+108,agency_detail,Regulation And Protection,Regulation And Protection Office Of The Healthcare Advocate,0.8
+109,agency_detail,Regulation And Protection,Dcp39500,0.8
+110,agency_detail,Regulation And Protection,Regulation And Protection Department Of Consumer Protection,0.8
+111,agency_detail,Regulation And Protection,Department Of Consumer Protection Regulation And Protection,0.8
+112,agency_detail,Regulation And Protection,Regulation And Protection Department Of Consumer Protection,0.8
+113,agency_detail,Regulation And Protection,Department Of Consumer Protection Regulation And Protection,0.8
+114,policy_changes,Regulation And Protection,Hro41100,0.9
+115,agency_detail,Regulation And Protection,Commission On Human Rights And Opportunities Regulation And Protection,0.8
+116,agency_detail,Regulation And Protection,Wcc42000,0.8
+117,narrative,Regulation And Protection,Workers’ Compensation Commission Regulation And Protection,0.3
+118,narrative,Conservation And Development,Summary Conservation And Development,0.3
+119,agency_detail,Conservation And Development,Major Changes,0.8
+120,policy_changes,Conservation And Development,Dcc38100,0.9
+121,agency_detail,Conservation And Development,Office Of Consumer Counsel Conservation And Development,0.8
+122,agency_detail,Conservation And Development,Conservation And Development Office Of Consumer Counsel,0.8
+123,agency_detail,Conservation And Development,Dol40000,0.8
+124,agency_detail,Conservation And Development,Conservation And Development Labor Department,0.8
+125,agency_detail,Conservation And Development,Labor Department Conservation And Development,0.8
+126,agency_detail,Conservation And Development,Conservation And Development Labor Department,0.8
+127,agency_detail,Conservation And Development,Labor Department Conservation And Development,0.8
+128,agency_detail,General Government,Conservation And Development Labor Department,0.8
+129,agency_detail,Conservation And Development,Labor Department Conservation And Development,0.8
+130,agency_detail,Conservation And Development,Conservation And Development Labor Department,0.8
+131,agency_detail,Conservation And Development,Dag42500,0.8
+132,agency_detail,Conservation And Development,Conservation And Development Department Of Agriculture,0.8
+133,agency_detail,Conservation And Development,Department Of Agriculture Conservation And Development,0.8
+134,agency_detail,Conservation And Development,Dep43000,0.8
+135,policy_changes,Conservation And Development,Department Of Energy And Environmental Protection Conservation And Development,0.9
+136,agency_detail,Conservation And Development,Conservation And Development Department Of Energy And Environmental Protection,0.8
+137,narrative,Conservation And Development,Department Of Energy And Environmental Protection Conservation And Development,0.3
+138,agency_detail,Conservation And Development,Conservation And Development Department Of Energy And Environmental Protection,0.8
+139,agency_detail,Conservation And Development,Department Of Energy And Environmental Protection Conservation And Development,0.8
+140,agency_detail,Conservation And Development,Ecd46000,0.8
+141,narrative,Conservation And Development,Department Of Economic And Community Development Conservation And Development,0.3
+142,agency_detail,Conservation And Development,Conservation And Development Department Of Economic And Community Development,0.8
+143,agency_detail,Conservation And Development,Department Of Economic And Community Development Conservation And Development,0.8
+144,narrative,Conservation And Development,Conservation And Development Department Of Economic And Community Development,0.3
+145,narrative,Conservation And Development,Department Of Economic And Community Development Conservation And Development,0.3
+146,narrative,Conservation And Development,Conservation And Development Department Of Economic And Community Development,0.3
+147,agency_detail,Conservation And Development,Department Of Economic And Community Development Conservation And Development,0.8
+148,narrative,Conservation And Development,Conservation And Development Department Of Economic And Community Development,0.3
+149,narrative,Conservation And Development,Department Of Economic And Community Development Conservation And Development,0.3
+150,narrative,Conservation And Development,Conservation And Development Department Of Economic And Community Development,0.3
+151,narrative,Conservation And Development,Department Of Economic And Community Development Conservation And Development,0.3
+152,agency_detail,Conservation And Development,Doh46900,0.8
+153,agency_detail,Conservation And Development,Department Of Housing Conservation And Development,0.8
+154,agency_detail,Conservation And Development,Conservation And Development Department Of Housing,0.8
+155,narrative,Human Services,Department Of Housing Conservation And Development,0.3
+156,agency_detail,Conservation And Development,Conservation And Development Department Of Housing,0.8
+157,agency_detail,Conservation And Development,Aes48000,0.8
+158,agency_detail,Conservation And Development,Conservation And Development Agricultural Experiment Station,0.8
+159,agency_detail,Conservation And Development,Agricultural Experiment Station Conservation And Development,0.8
+160,agency_detail,,Summary Health,0.8
+161,narrative,,Department Of Developmental Services,0.3
+162,agency_detail,,Dph48500,0.8
+163,narrative,,Department Of Public Health Health,0.3
+164,agency_detail,Transportation,Health Department Of Public Health,0.8
+165,agency_detail,,Department Of Public Health Health,0.8
+166,agency_detail,,Health Department Of Public Health,0.8
+167,policy_changes,Human Services,Department Of Public Health Health,0.9
+168,agency_detail,,Health Department Of Public Health,0.8
+169,agency_detail,,Ohs49450,0.8
+170,agency_detail,,Health Office Of Health Strategy,0.8
+171,agency_detail,Human Services,Office Of Health Strategy Health,0.8
+172,agency_detail,Transportation,Health Office Of Health Strategy,0.8
+173,agency_detail,,Office Of Health Strategy Health,0.8
+174,agency_detail,,Cme49500,0.8
+175,narrative,,Office Of The Chief Medical Examiner Health,0.3
+176,agency_detail,,Dds50000,0.8
+177,agency_detail,Transportation,Department Of Developmental Services Health,0.8
+178,narrative,Human Services,Health Department Of Developmental Services,0.3
+179,agency_detail,,Department Of Developmental Services Health,0.8
+180,agency_detail,,Mha53000,0.8
+181,agency_detail,,Department Of Mental Health And Addiction Services Health,0.8
+182,agency_detail,Transportation,Health Department Of Mental Health And Addiction Services,0.8
+183,agency_detail,Transportation,Department Of Mental Health And Addiction Services Health,0.8
+184,narrative,Human Services,Health Department Of Mental Health And Addiction Services,0.3
+185,agency_detail,,Department Of Mental Health And Addiction Services Health,0.8
+186,agency_detail,,Psr56000,0.8
+187,narrative,Transportation,Transportation Summary,0.3
+188,agency_detail,Transportation,Dmv35000,0.8
+189,agency_detail,Transportation,Department Of Motor Vehicles Transportation,0.8
+190,agency_detail,Transportation,Transportation Department Of Motor Vehicles,0.8
+191,agency_detail,Transportation,Dot57000,0.8
+192,narrative,Transportation,Transportation Department Of Transportation,0.3
+193,narrative,Transportation,Department Of Transportation Transportation,0.3
+194,agency_detail,Transportation,Transportation Department Of Transportation,0.8
+195,narrative,Transportation,Department Of Transportation Transportation,0.3
+196,narrative,Transportation,Transportation Department Of Transportation,0.3
+197,narrative,Human Services,Human Services Summary,0.3
+198,narrative,Human Services,Department Of Children And Families,0.3
+199,agency_detail,Human Services,Dss60000,0.8
+200,policy_changes,Human Services,Human Services Department Of Social Services,0.9
+201,narrative,Human Services,Department Of Social Services Human Services,0.3
+202,agency_detail,Human Services,Human Services Department Of Social Services,0.8
+203,narrative,Human Services,Department Of Social Services Human Services,0.3
+204,narrative,Human Services,Human Services Department Of Social Services,0.3
+205,narrative,Human Services,Department Of Social Services Human Services,0.3
+206,agency_detail,Human Services,Human Services Department Of Social Services,0.8
+207,agency_detail,Human Services,Department Of Social Services Human Services,0.8
+208,narrative,Human Services,Human Services Department Of Social Services,0.3
+209,policy_changes,Human Services,Department Of Social Services Human Services,0.9
+210,narrative,Human Services,Human Services Department Of Social Services,0.3
+211,agency_detail,Human Services,Department Of Social Services Human Services,0.8
+212,agency_detail,Human Services,Sdr63500,0.8
+213,agency_detail,Human Services,Department Of Aging And Disability Services Human Services,0.8
+214,agency_detail,Human Services,Human Services Department Of Aging And Disability Services,0.8
+215,agency_detail,Human Services,Department Of Aging And Disability Services Human Services,0.8
+216,narrative,Human Services,Human Services Department Of Aging And Disability Services,0.3
+217,narrative,Human Services,Department Of Aging And Disability Services Human Services,0.3
+218,agency_detail,Human Services,Human Services Department Of Aging And Disability Services,0.8
+219,agency_detail,Human Services,Dcf91000,0.8
+220,agency_detail,Human Services,Human Services Department Of Children And Families,0.8
+221,narrative,Human Services,Department Of Children And Families Human Services,0.3
+222,narrative,Human Services,Human Services Department Of Children And Families,0.3
+223,narrative,Human Services,Department Of Children And Families Human Services,0.3
+224,narrative,Human Services,Human Services Department Of Children And Families,0.3
+225,agency_detail,Human Services,Department Of Children And Families Human Services,0.8
+226,agency_detail,,Summary Element. & Secondary Education,0.8
+227,agency_detail,Transportation,Sde64000,0.8
+228,narrative,,Element. & Secondary Education Department Of Education,0.3
+229,agency_detail,,Department Of Education Element. & Secondary Education,0.8
+230,agency_detail,,Element. & Secondary Education Department Of Education,0.8
+231,narrative,,Department Of Education Element. & Secondary Education,0.3
+232,narrative,,Element. & Secondary Education Department Of Education,0.3
+233,narrative,,Department Of Education Element. & Secondary Education,0.3
+234,narrative,,Element. & Secondary Education Department Of Education,0.3
+235,narrative,Transportation,Department Of Education Element. & Secondary Education,0.3
+236,agency_detail,,Element. & Secondary Education Department Of Education,0.8
+237,policy_changes,Transportation,Department Of Education Element. & Secondary Education,0.9
+238,narrative,,Element. & Secondary Education Department Of Education,0.3
+239,narrative,,Department Of Education Element. & Secondary Education,0.3
+240,agency_detail,,Element. & Secondary Education Department Of Education,0.8
+241,agency_detail,,Tec64600,0.8
+242,agency_detail,,Element. & Secondary Education Connecticut Technical Education And Career System,0.8
+243,agency_detail,,Oec64800,0.8
+244,narrative,,Element. & Secondary Education Office Of Early Childhood,0.3
+245,narrative,,Office Of Early Childhood Element. & Secondary Education,0.3
+246,narrative,,Element. & Secondary Education Office Of Early Childhood,0.3
+247,narrative,Human Services,Office Of Early Childhood Element. & Secondary Education,0.3
+248,narrative,,Element. & Secondary Education Office Of Early Childhood,0.3
+249,agency_detail,,Csl66000,0.8
+250,narrative,,Element. & Secondary Education State Library,0.3
+251,narrative,,State Library Element. & Secondary Education,0.3
+252,agency_detail,,Trb77500,0.8
+253,narrative,,Teachers’ Retirement Board Element. & Secondary Education,0.3
+254,narrative,,Element. & Secondary Education Teachers’ Retirement Board,0.3
+255,narrative,Higher Education,Higher Education Summary,0.3
+256,agency_detail,Higher Education,Dhe66500,0.8
+257,agency_detail,Higher Education,Office Of Higher Education Higher Education,0.8
+258,agency_detail,Higher Education,Higher Education Office Of Higher Education,0.8
+259,agency_detail,Higher Education,Office Of Higher Education Higher Education,0.8
+260,policy_changes,Higher Education,Uoc67000,0.9
+261,narrative,Higher Education,University Of Connecticut Higher Education,0.3
+262,narrative,Higher Education,Higher Education University Of Connecticut,0.3
+263,agency_detail,Higher Education,Uhc72000,0.8
+264,agency_detail,Higher Education,Higher Education University Of Connecticut Health Center,0.8
+265,agency_detail,Higher Education,University Of Connecticut Health Center Higher Education,0.8
+266,agency_detail,Higher Education,Bor77700,0.8
+267,narrative,Higher Education,Connecticut State Colleges And Universities Higher Education,0.3
+268,narrative,Higher Education,Higher Education Connecticut State Colleges And Universities,0.3
+269,narrative,Higher Education,Connecticut State Colleges And Universities Higher Education,0.3
+270,narrative,Judicial And Corrections,Summary Judicial And Corrections,0.3
+271,agency_detail,Judicial And Corrections,Dcj30000,0.8
+272,agency_detail,Judicial And Corrections,Judicial And Corrections Division Of Criminal Justice,0.8
+273,agency_detail,Judicial And Corrections,Division Of Criminal Justice Judicial And Corrections,0.8
+274,agency_detail,Judicial And Corrections,Doc88000,0.8
+275,narrative,Judicial And Corrections,Department Of Correction Judicial And Corrections,0.3
+276,narrative,Human Services,Judicial And Corrections Department Of Correction,0.3
+277,narrative,Judicial And Corrections,Department Of Correction Judicial And Corrections,0.3
+278,agency_detail,Judicial And Corrections,Jud95000,0.8
+279,agency_detail,,Judicial Department,0.8
+280,agency_detail,,Judicial Department,0.8
+281,narrative,,Judicial Department,0.3
+282,agency_detail,Human Services,Judicial Department,0.8
+283,policy_changes,,Judicial Department,0.9
+284,narrative,Judicial And Corrections,Judicial And Corrections Judicial Department,0.3
+285,narrative,Judicial And Corrections,Judicial Department Judicial And Corrections,0.3
+286,narrative,Judicial And Corrections,Judicial And Corrections Judicial Department,0.3
+287,narrative,Judicial And Corrections,Judicial Department Judicial And Corrections,0.3
+288,narrative,Judicial And Corrections,Judicial And Corrections Judicial Department,0.3
+289,agency_detail,Judicial And Corrections,Pds98500,0.8
+290,agency_detail,Judicial And Corrections,Judicial And Corrections Public Defender Services Commission,0.8
+291,agency_detail,Judicial And Corrections,Public Defender Services Commission Judicial And Corrections,0.8
+292,narrative,,Summary Veterans’ And Military Affairs,0.3
+293,agency_detail,,Dva21000,0.8
+294,narrative,Human Services,Veterans’ And Military Affairs Department Of Veterans’ Affairs,0.3
+295,agency_detail,,Department Of Veterans’ Affairs Veterans’ And Military Affairs,0.8
+296,agency_detail,,Mil36000,0.8
+297,narrative,,Military Department Veterans’ And Military Affairs,0.3
+298,narrative,,Veterans’ And Military Affairs Military Department,0.3
+299,policy_changes,,Part Iii. Revenue,0.9
+300,policy_changes,,Part Iii. Revenue,0.9
+301,policy_changes,,Part Iii. Revenue,0.9
+302,narrative,Transportation,Part Iii. Revenue,0.3
+303,narrative,,Part Iii. Revenue,0.3
+304,narrative,,Part Iii. Revenue,0.3
+305,narrative,,Part Iii. Revenue,0.3
+306,narrative,,Part Iii. Revenue,0.3
+307,policy_changes,,Part Iii. Revenue,0.9
+308,policy_changes,,Part Iii. Revenue,0.9
+309,policy_changes,,Part Iii. Revenue,0.9
+310,policy_changes,General Government,Part Iii. Revenue,0.9
+311,policy_changes,,Part Iii. Revenue,0.9
+312,policy_changes,,Part Iii. Revenue,0.9
+313,policy_changes,,Part Iii. Revenue,0.9
+314,policy_changes,,Part Iii. Revenue,0.9
+315,policy_changes,,Part Iii. Revenue,0.9
+316,policy_changes,,Part Iii. Revenue,0.9
+317,narrative,,Part Iii. Revenue,0.3
+318,policy_changes,,Part Iii. Revenue,0.9
+319,narrative,Transportation,Part Iii. Revenue,0.3
+320,narrative,Transportation,Part Iii. Revenue,0.3
+321,narrative,Transportation,Part Iv. Capital Budget,0.3
+322,agency_detail,,Part Iv. Capital Budget,0.8
+323,narrative,Transportation,Part Iv. Capital Budget,0.3
+324,narrative,,Part Iv. Capital Budget,0.3
+325,narrative,,Part Iv. Capital Budget,0.3
+326,narrative,Transportation,Part Iv. Capital Budget,0.3
+327,narrative,,Part Iv. Capital Budget,0.3
+328,narrative,,Part Iv. Capital Budget,0.3
+329,narrative,Transportation,Part Iv. Capital Budget,0.3
+330,policy_changes,Higher Education,Pa,0.9
+331,policy_changes,,Part Iv. Capital Budget,0.9
+332,policy_changes,,Part V. Municipal Aid,0.9
+333,narrative,Transportation,Part V. Municipal Aid,0.3
+334,narrative,,Part V. Municipal Aid,0.3
+335,narrative,Transportation,Part V. Municipal Aid,0.3
+336,agency_detail,,Fy 26 – Fy 27 -,0.8
+337,narrative,Higher Education,Fy 26 – Fy 27 -,0.3
+338,narrative,,Fy 26 – Fy 27 -,0.3
+339,narrative,Transportation,Appendix B And C,0.3
+340,narrative,,Appendix D,0.3
+341,narrative,,Fy 24 Fy 25 Fy 26 Fy 27,0.3
+342,narrative,,Fy 24 Fy 25 Fy 26 Fy 27,0.3
+343,narrative,,Other Appropriated Funds Explained,0.3
+344,narrative,,Appendix E,0.3
+345,narrative,,Appendix F,0.3
+346,narrative,Transportation,Appendix G,0.3
+347,narrative,,Appendix H,0.3
+348,narrative,Transportation,Appendix H,0.3
+349,narrative,,Appendix I,0.3
+350,narrative,,Appendix I,0.3
+351,narrative,Human Services,Appendix I,0.3
+352,narrative,,Appendix I,0.3
+353,narrative,,Appendix I,0.3
+354,narrative,Transportation,Appendix I,0.3
+355,narrative,Transportation,Appendix J,0.3
+356,narrative,Higher Education,Appendix J,0.3
+357,narrative,Higher Education,Appendix J,0.3
+358,narrative,Transportation,Appendix K,0.3
+359,narrative,Higher Education,Agency Index,0.3
+360,narrative,,"Women, Children, Seniors, Equity And Opportunity, Commission On ................................................................................ 28",0.3
