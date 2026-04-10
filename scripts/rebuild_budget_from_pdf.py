@@ -83,7 +83,11 @@ def normalize_whitespace(value: str) -> str:
 
 MOJIBAKE_REPLACEMENTS = {
     "â€™": "'",
+    "â€˜": "'",
     "Ã¢â‚¬â„¢": "'",
+    "Ã¢â‚¬Ëœ": "'",
+    "Ã¢â‚¬Â™": "'",
+    "Ã¢Â€Â™": "'",
 }
 
 
@@ -190,12 +194,24 @@ JUNK_AGENCY_LABELS = {
 }
 
 
+def _dedupe_words_ci(text: str) -> str:
+    words = text.split()
+    deduped: List[str] = []
+    for word in words:
+        if not deduped or deduped[-1].lower() != word.lower():
+            deduped.append(word)
+    return " ".join(deduped)
+
+
 def detect_agency(text: str) -> Optional[str]:
     def is_valid_candidate(line: str) -> bool:
         if not line:
             return False
         lowered = line.lower()
         if lowered in JUNK_AGENCY_LABELS:
+            return False
+        deduped = _dedupe_words_ci(line).lower()
+        if deduped in JUNK_AGENCY_LABELS:
             return False
         compact = re.sub(r"\s+", "", line)
         if re.fullmatch(r"[A-Z]{2,4}\d{4,6}", compact, flags=re.IGNORECASE):
@@ -208,9 +224,9 @@ def detect_agency(text: str) -> Optional[str]:
         if cleaned:
             lines.append(cleaned)
     for line in lines[:5]:
-        candidate = line.title()
+        candidate = line
         if line.isupper() and len(line.split()) <= 8:
-            candidate = normalize_whitespace(line.title())
+            candidate = normalize_whitespace(line)
         if is_valid_candidate(candidate):
             return candidate
     return None
