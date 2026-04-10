@@ -81,6 +81,29 @@ class PageGroup:
 def normalize_whitespace(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
+def clean_agency_name(text: str | None) -> Optional[str]:
+    if not text:
+        return None
+
+    text = text.strip()
+
+    # Remove leading codes like OLM10000, APA11000, SOS12500
+    text = re.sub(r'^[A-Z]{2,4}\d{4,6}\s*[-:]?\s*', '', text)
+
+    # Remove "General Government A" suffix noise
+    text = re.sub(r'\bGeneral Government A\b', '', text, flags=re.IGNORECASE)
+
+    # Remove duplicate words
+    words = text.split()
+    deduped = []
+    for w in words:
+        if not deduped or deduped[-1] != w:
+            deduped.append(w)
+
+    text = " ".join(deduped)
+
+    return text.strip()
+
 
 def clean_money(token: str) -> Optional[float]:
     token = token.strip()
@@ -123,7 +146,7 @@ def detect_agency(text: str) -> Optional[str]:
 def classify_page(page_number: int, text: str) -> PageClassification:
     lowered = text.lower()
     subcommittee = detect_subcommittee(text)
-    agency = detect_agency(text)
+    agency = clean_agency_name(detect_agency(lines)
     confidence = 0.2
 
     if "policy" in lowered and "change" in lowered:
