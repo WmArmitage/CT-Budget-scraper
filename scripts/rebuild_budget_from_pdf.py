@@ -81,6 +81,17 @@ class PageGroup:
 def normalize_whitespace(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
+MOJIBAKE_REPLACEMENTS = {
+    "â€™": "'",
+    "Ã¢â‚¬â„¢": "'",
+}
+
+
+def normalize_page_text(text: str) -> str:
+    for bad, good in MOJIBAKE_REPLACEMENTS.items():
+        text = text.replace(bad, good)
+    return text
+
 def clean_agency_name(text: str | None) -> Optional[str]:
     if not text:
         return None
@@ -168,19 +179,49 @@ def detect_subcommittee(text: str) -> Optional[str]:
     return None
 
 
+JUNK_AGENCY_LABELS = {
+    "general government a",
+    "general government b",
+    "legislative",
+    "legislative management",
+    "summary",
+    "part ii. appropriations",
+    "subcommittees: table of contents",
+}
+
+
 def detect_agency(text: str) -> Optional[str]:
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    def is_valid_candidate(line: str) -> bool:
+        if not line:
+            return False
+        lowered = line.lower()
+        if lowered in JUNK_AGENCY_LABELS:
+            return False
+        compact = re.sub(r"\s+", "", line)
+        if re.fullmatch(r"[A-Z]{2,4}\d{4,6}", compact, flags=re.IGNORECASE):
+            return False
+        return True
+
+    lines: List[str] = []
+    for raw in text.splitlines():
+        cleaned = normalize_whitespace(raw)
+        if cleaned:
+            lines.append(cleaned)
     for line in lines[:5]:
+        candidate = line.title()
         if line.isupper() and len(line.split()) <= 8:
-            return normalize_whitespace(line.title())
-    return lines[0].title() if lines else None
+            candidate = normalize_whitespace(line.title())
+        if is_valid_candidate(candidate):
+            return candidate
+    return None
 
 
 def classify_page(page_num: int, text: str) -> PageClassification:
-    lowered = text.lower()
+    normalized_text = normalize_page_text(text)
+    lowered = normalized_text.lower()
 
-    agency = clean_agency_name(detect_agency(text))
-    subcommittee = detect_subcommittee(text)
+    agency = clean_agency_name(detect_agency(normalized_text))
+    subcommittee = detect_subcommittee(normalized_text)
     confidence = 0.2
 
     if "policy" in lowered and "change" in lowered:
