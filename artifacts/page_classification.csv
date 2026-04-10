@@ -5,31 +5,31 @@ page_number,page_type,subcommittee,agency,confidence
 21,narrative,,Legislative Summary,0.3
 22,agency_detail,,Olm10000,0.8
 23,narrative,Higher Education,Legislative Management Legislative,0.3
-24,narrative,,Legislative Legislative Management,0.3
+24,narrative,,Legislative Management,0.3
 25,narrative,Higher Education,Legislative Management Legislative,0.3
-26,narrative,,Legislative Legislative Management,0.3
+26,narrative,,Legislative Management,0.3
 27,agency_detail,,Apa11000,0.8
 28,agency_detail,,Legislative Auditors Of Public Accounts,0.8
 29,agency_detail,,Cwe11980,0.8
 30,agency_detail,,"Legislative Commission On Women, Children, Seniors, Equity And Opportunity",0.8
-31,agency_detail,General Government,General Government A Summary,0.8
+31,agency_detail,General Government,Summary,0.8
 32,agency_detail,General Government,Gov12000,0.8
-33,narrative,General Government,Governor’S Office General Government A,0.3
+33,narrative,General Government,Governor’S Office,0.3
 34,agency_detail,General Government,Sos12500,0.8
-35,agency_detail,General Government,Secretary Of The State General Government A,0.8
-36,agency_detail,General Government,General Government A Secretary Of The State,0.8
-37,agency_detail,General Government,Secretary Of The State General Government A,0.8
+35,agency_detail,General Government,Secretary Of The State,0.8
+36,agency_detail,General Government,Secretary Of The State,0.8
+37,agency_detail,General Government,Secretary Of The State,0.8
 38,agency_detail,General Government,Lgo13000,0.8
-39,narrative,General Government,Lieutenant Governor’S Office General Government A,0.3
+39,narrative,General Government,Lieutenant Governor’S Office,0.3
 40,agency_detail,General Government,Ele13500,0.8
-41,narrative,General Government,Elections Enforcement Commission General Government A,0.3
+41,narrative,General Government,Elections Enforcement Commission,0.3
 42,agency_detail,General Government,Eth13600,0.8
-43,narrative,General Government,Office Of State Ethics General Government A,0.3
+43,narrative,General Government,Office Of State Ethics,0.3
 44,agency_detail,General Government,Foi13700,0.8
 45,agency_detail,General Government,Oga17000,0.8
-46,agency_detail,General Government,General Government A Office Of Governmental Accountability,0.8
-47,agency_detail,General Government,Office Of Governmental Accountability General Government A,0.8
-48,agency_detail,General Government,General Government A Office Of Governmental Accountability,0.8
+46,agency_detail,General Government,Office Of Governmental Accountability,0.8
+47,agency_detail,General Government,Office Of Governmental Accountability,0.8
+48,agency_detail,General Government,Office Of Governmental Accountability,0.8
 49,narrative,General Government,General Government B Summary,0.3
 50,policy_changes,General Government,Summary General Government B,0.9
 51,narrative,General Government,General Government B Summary,0.3
@@ -72,7 +72,7 @@ page_number,page_type,subcommittee,agency,confidence
 88,agency_detail,General Government,Das23100,0.8
 89,narrative,General Government,Workers’ Compensation Claims - Administrative Services General Government B,0.3
 90,agency_detail,General Government,Oag29000,0.8
-91,agency_detail,General Government,Attorney General General Government B,0.8
+91,agency_detail,General Government,Attorney General Government B,0.8
 92,agency_detail,General Government,General Government B Attorney General,0.8
 93,agency_detail,Regulation And Protection,Regulation And Protection Summary,0.8
 94,agency_detail,Regulation And Protection,Dps32000,0.8
@@ -144,11 +144,11 @@ page_number,page_type,subcommittee,agency,confidence
 160,agency_detail,,Summary Health,0.8
 161,narrative,,Department Of Developmental Services,0.3
 162,agency_detail,,Dph48500,0.8
-163,narrative,,Department Of Public Health Health,0.3
+163,narrative,,Department Of Public Health,0.3
 164,agency_detail,Transportation,Health Department Of Public Health,0.8
-165,agency_detail,,Department Of Public Health Health,0.8
+165,agency_detail,,Department Of Public Health,0.8
 166,agency_detail,,Health Department Of Public Health,0.8
-167,policy_changes,Human Services,Department Of Public Health Health,0.9
+167,policy_changes,Human Services,Department Of Public Health,0.9
 168,agency_detail,,Health Department Of Public Health,0.8
 169,agency_detail,,Ohs49450,0.8
 170,agency_detail,,Health Office Of Health Strategy,0.8
@@ -174,9 +174,9 @@ page_number,page_type,subcommittee,agency,confidence
 190,agency_detail,Transportation,Transportation Department Of Motor Vehicles,0.8
 191,agency_detail,Transportation,Dot57000,0.8
 192,narrative,Transportation,Transportation Department Of Transportation,0.3
-193,narrative,Transportation,Department Of Transportation Transportation,0.3
+193,narrative,Transportation,Department Of Transportation,0.3
 194,agency_detail,Transportation,Transportation Department Of Transportation,0.8
-195,narrative,Transportation,Department Of Transportation Transportation,0.3
+195,narrative,Transportation,Department Of Transportation,0.3
 196,narrative,Transportation,Transportation Department Of Transportation,0.3
 197,narrative,Human Services,Human Services Summary,0.3
 198,narrative,Human Services,Department Of Children And Families,0.3

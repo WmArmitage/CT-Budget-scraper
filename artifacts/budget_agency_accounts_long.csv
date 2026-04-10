@@ -23,15 +23,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,actual,2023,721249.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,actual,2023,34125.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,actual,2023,755374.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,actual,2023,3215910.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,actual,2023,12095131.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,actual,2023,753348.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,actual,2023,3452687.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,actual,2023,1816433.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,actual,2023,1983206.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,actual,2023,2380508.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,actual,2023,25697223.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,actual,2023,25697223.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,actual,2023,3215910.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,actual,2023,12095131.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,actual,2023,753348.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,actual,2023,3452687.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,actual,2023,1816433.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,actual,2023,1983206.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,actual,2023,2380508.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,actual,2023,25697223.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,actual,2023,25697223.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,actual,2023,31.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,actual,2023,2532390.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,actual,2023,87982.0
@@ -902,15 +902,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,actual,2024,790983.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,actual,2024,48569.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,actual,2024,839552.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,actual,2024,3163108.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,actual,2024,13882526.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,actual,2024,837942.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,actual,2024,3193780.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,actual,2024,1903315.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,actual,2024,1761199.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,actual,2024,2385053.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,actual,2024,27126923.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,actual,2024,27126923.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,actual,2024,3163108.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,actual,2024,13882526.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,actual,2024,837942.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,actual,2024,3193780.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,actual,2024,1903315.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,actual,2024,1761199.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,actual,2024,2385053.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,actual,2024,27126923.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,actual,2024,27126923.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,actual,2024,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,actual,2024,2606293.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,actual,2024,455545.0
@@ -1781,15 +1781,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,appropriation,2025,969868.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,appropriation,2025,60000.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,appropriation,2025,1029868.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,appropriation,2025,4645803.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,appropriation,2025,13204587.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,appropriation,2025,764845.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,appropriation,2025,4233756.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,appropriation,2025,1964230.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,appropriation,2025,2211809.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,appropriation,2025,3029161.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,appropriation,2025,30054191.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,appropriation,2025,30054191.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,appropriation,2025,4645803.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,appropriation,2025,13204587.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,appropriation,2025,764845.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,appropriation,2025,4233756.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,appropriation,2025,1964230.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,appropriation,2025,2211809.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,appropriation,2025,3029161.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,appropriation,2025,30054191.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,appropriation,2025,30054191.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,appropriation,2025,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,appropriation,2025,3838460.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,appropriation,2025,635401.0
@@ -2660,15 +2660,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,governor,2026,1015452.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,governor,2026,60000.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,governor,2026,1075452.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,governor,2026,4976422.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,governor,2026,12362079.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,governor,2026,904885.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,governor,2026,3925912.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,governor,2026,2069345.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,governor,2026,2283813.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,governor,2026,3167090.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,governor,2026,29689546.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,governor,2026,29689546.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,governor,2026,4976422.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,governor,2026,12362079.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,governor,2026,904885.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,governor,2026,3925912.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,governor,2026,2069345.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,governor,2026,2283813.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,governor,2026,3167090.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,governor,2026,29689546.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,governor,2026,29689546.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,governor,2026,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,governor,2026,3975286.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,governor,2026,885401.0
@@ -3539,15 +3539,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,governor,2027,1015452.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,governor,2027,60000.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,governor,2027,1075452.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,governor,2027,4732209.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,governor,2027,12362079.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,governor,2027,904885.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,governor,2027,3925912.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,governor,2027,2059779.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,governor,2027,2283813.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,governor,2027,3167090.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,governor,2027,29435767.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,governor,2027,29435767.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,governor,2027,4732209.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,governor,2027,12362079.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,governor,2027,904885.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,governor,2027,3925912.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,governor,2027,2059779.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,governor,2027,2283813.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,governor,2027,3167090.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,governor,2027,29435767.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,governor,2027,29435767.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,governor,2027,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,governor,2027,3975286.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,governor,2027,635401.0
@@ -4418,15 +4418,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,legislative,2026,1127850.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,legislative,2026,60000.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,legislative,2026,1187850.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,legislative,2026,4734840.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,legislative,2026,17044732.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,legislative,2026,911921.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,legislative,2026,4257796.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,legislative,2026,2069345.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,legislative,2026,2283813.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,legislative,2026,4003262.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,legislative,2026,35305709.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,legislative,2026,35305709.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,legislative,2026,4734840.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,legislative,2026,17044732.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,legislative,2026,911921.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,legislative,2026,4257796.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,legislative,2026,2069345.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,legislative,2026,2283813.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,legislative,2026,4003262.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,legislative,2026,35305709.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,legislative,2026,35305709.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,legislative,2026,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,legislative,2026,3983704.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,legislative,2026,635401.0
@@ -5297,15 +5297,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,scenario,fiscal_y
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,legislative,2027,1227933.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,legislative,2027,60000.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,legislative,2027,1287933.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,legislative,2027,4740627.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,legislative,2027,15809732.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,legislative,2027,911921.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,legislative,2027,4255296.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,legislative,2027,2059779.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,legislative,2027,2283813.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,legislative,2027,3977255.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,legislative,2027,34038423.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,legislative,2027,34038423.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,legislative,2027,4740627.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,legislative,2027,15809732.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,legislative,2027,911921.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,legislative,2027,4255296.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,legislative,2027,2059779.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,legislative,2027,2283813.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,legislative,2027,3977255.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,legislative,2027,34038423.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,legislative,2027,34038423.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,legislative,2027,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,legislative,2027,3983704.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,legislative,2027,635401.0

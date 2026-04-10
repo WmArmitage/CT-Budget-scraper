@@ -85,24 +85,57 @@ def clean_agency_name(text: str | None) -> Optional[str]:
     if not text:
         return None
 
-    text = text.strip()
+    agency_code_map = {
+        "OLM10000": "Office Of Legislative Management",
+        "APA11000": "Auditors Of Public Accounts",
+        "GOV12000": "Governor's Office",
+        "SOS12500": "Secretary Of The State",
+        "LGO13000": "Lieutenant Governor's Office",
+        "ELE13500": "State Elections Enforcement Commission",
+        "ETH13600": "Office Of State Ethics",
+        "FOI13700": "Freedom Of Information Commission",
+    }
+    junk_labels = [
+        "Summary",
+        "Part II. Appropriations",
+        "Subcommittees: Table Of Contents",
+        "General Government A",
+    ]
 
-    # Remove leading codes like OLM10000, APA11000, SOS12500
-    text = re.sub(r'^[A-Z]{2,4}\d{4,6}\s*[-:]?\s*', '', text)
+    # Normalize unicode punctuation noise first
+    text = text.replace("â€™", "'")
+    text = normalize_whitespace(text)
+    if not text:
+        return None
 
-    # Remove "General Government A" suffix noise
-    text = re.sub(r'\bGeneral Government A\b', '', text, flags=re.IGNORECASE)
+    # Remove/translate leading agency codes
+    code_match = re.match(r"^([A-Z]{2,4}\d{4,6})\s*[-:]?\s*", text, flags=re.IGNORECASE)
+    prefix = ""
+    if code_match:
+        code = code_match.group(1).upper()
+        prefix = agency_code_map.get(code, "")
+        text = text[code_match.end():].lstrip()
+    if prefix:
+        text = f"{prefix} {text}".strip()
 
-    # Remove duplicate words
+    # Strip junk labels wherever they appear
+    for label in junk_labels:
+        text = re.sub(rf"\b{re.escape(label)}\b", "", text, flags=re.IGNORECASE)
+        text = normalize_whitespace(text)
+
+    # De-dupe consecutive words (case-insensitive)
     words = text.split()
-    deduped = []
+    deduped: List[str] = []
     for w in words:
-        if not deduped or deduped[-1] != w:
+        if not deduped or deduped[-1].lower() != w.lower():
             deduped.append(w)
+    text = " ".join(deduped).strip()
 
-    text = " ".join(deduped)
+    # Return None if result is empty or lacks alphabetic characters
+    if not text or not re.search(r"[A-Za-z]", text):
+        return None
 
-    return text.strip()
+    return text
 
 
 def clean_money(token: str) -> Optional[float]:

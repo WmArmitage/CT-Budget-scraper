@@ -23,15 +23,15 @@ source_document,page,subcommittee,agency,fund,account,row_type,actual_fy23,actua
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Personal Services,account,721249.0,790983.0,969868.0,1015452.0,1015452.0,1127850.0,1227933.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Other Expenses,account,34125.0,48569.0,60000.0,60000.0,60000.0,60000.0,60000.0
 2025BB-20250827_FY26_FY27.pdf,29,,Cwe11980,Fund,Agency Total - General Fund,account,755374.0,839552.0,1029868.0,1075452.0,1075452.0,1187850.0,1287933.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Governor's Office,account,3215910.0,3163108.0,4645803.0,4976422.0,4732209.0,4734840.0,4740627.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Secretary of the State,account,12095131.0,13882526.0,13204587.0,12362079.0,12362079.0,17044732.0,15809732.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office,account,753348.0,837942.0,764845.0,904885.0,904885.0,911921.0,911921.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,3452687.0,3193780.0,4233756.0,3925912.0,3925912.0,4257796.0,4255296.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Office of State Ethics,account,1816433.0,1903315.0,1964230.0,2069345.0,2059779.0,2069345.0,2059779.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Commission,account,1983206.0,1761199.0,2211809.0,2283813.0,2283813.0,2283813.0,2283813.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Accountability,account,2380508.0,2385053.0,3029161.0,3167090.0,3167090.0,4003262.0,3977255.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - General Fund,fund_total,25697223.0,27126923.0,30054191.0,29689546.0,29435767.0,35305709.0,34038423.0
-2025BB-20250827_FY26_FY27.pdf,31,General Government,General Government A Summary,General Fund,Total - Appropriated Funds,fund_total,25697223.0,27126923.0,30054191.0,29689546.0,29435767.0,35305709.0,34038423.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Governor's Office,account,3215910.0,3163108.0,4645803.0,4976422.0,4732209.0,4734840.0,4740627.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Secretary of the State,account,12095131.0,13882526.0,13204587.0,12362079.0,12362079.0,17044732.0,15809732.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office,account,753348.0,837942.0,764845.0,904885.0,904885.0,911921.0,911921.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,3452687.0,3193780.0,4233756.0,3925912.0,3925912.0,4257796.0,4255296.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Office of State Ethics,account,1816433.0,1903315.0,1964230.0,2069345.0,2059779.0,2069345.0,2059779.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Commission,account,1983206.0,1761199.0,2211809.0,2283813.0,2283813.0,2283813.0,2283813.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Accountability,account,2380508.0,2385053.0,3029161.0,3167090.0,3167090.0,4003262.0,3977255.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - General Fund,fund_total,25697223.0,27126923.0,30054191.0,29689546.0,29435767.0,35305709.0,34038423.0
+2025BB-20250827_FY26_FY27.pdf,31,General Government,Summary,General Fund,Total - Appropriated Funds,fund_total,25697223.0,27126923.0,30054191.0,29689546.0,29435767.0,35305709.0,34038423.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,General Fund,account,31.0,28.0,28.0,28.0,28.0,28.0,28.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Personal Services,account,2532390.0,2606293.0,3838460.0,3975286.0,3975286.0,3983704.0,3983704.0
 2025BB-20250827_FY26_FY27.pdf,32,General Government,Gov12000,Fund,Other Expenses,account,87982.0,455545.0,635401.0,885401.0,635401.0,635401.0,635401.0
