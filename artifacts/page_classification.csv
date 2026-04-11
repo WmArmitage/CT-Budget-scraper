@@ -1,16 +1,16 @@
 page_number,page_type,subcommittee,agency,confidence
-18,narrative,Transportation,Part I. Overview,0.3
-19,policy_changes,General Government,APPROPRIATIONS CHANGES BY SUBCOMMITTEE,0.9
-20,subcommittee_summary,General Government,Legislative ...................................................................................................................................................... 20,0.85
+18,narrative,Transportation,SPECIAL TRANSPORTATION FUND,0.3
+19,policy_changes,General Government,The budget includes gross appropriations that are higher by approximately $1.1 billion and $2.5,0.9
+20,subcommittee_summary,General Government,,0.85
 21,narrative,,Legislative,0.3
-22,agency_detail,,Permanent Full-Time Positions,0.8
-23,narrative,Higher Education,Legislative Management Legislative,0.3
+22,agency_detail,,Actual Appropriation Governor Recommended,0.8
+23,narrative,Higher Education,Legislative Management,0.3
 24,narrative,,Governor Recommended Legislative Difference from Governor,0.3
-25,narrative,Higher Education,Legislative Management Legislative,0.3
-26,narrative,,Totals,0.3
-27,agency_detail,,Auditors of Public Accounts Legislative,0.8
+25,narrative,Higher Education,Legislative Management,0.3
+26,narrative,,Governor Recommended Legislative Difference from Governor,0.3
+27,agency_detail,,Auditors of Public Accounts,0.8
 28,agency_detail,,Legislative Auditors of Public Accounts,0.8
-29,agency_detail,,"Commission on Women, Children, Seniors, Equity and Opportunity Legislative",0.8
+29,agency_detail,,"Commission on Women, Children, Seniors, Equity and Opportunity",0.8
 30,agency_detail,,"Legislative Commission on Women, Children, Seniors, Equity and Opportunity",0.8
 31,agency_detail,General Government,,0.8
 32,agency_detail,General Government,Governor’s Office,0.8
@@ -30,50 +30,50 @@ page_number,page_type,subcommittee,agency,confidence
 46,agency_detail,General Government,Office of Governmental Accountability,0.8
 47,agency_detail,General Government,Office of Governmental Accountability,0.8
 48,agency_detail,General Government,Office of Governmental Accountability,0.8
-49,narrative,General Government,General Government B,0.3
-50,policy_changes,General Government,General Government B,0.9
-51,narrative,General Government,General Government B,0.3
-52,agency_detail,General Government,General Government B State Treasurer,0.8
-53,narrative,General Government,State Treasurer General Government B,0.3
-54,policy_changes,General Government,General Government B Debt Service - State Treasurer,0.9
-55,policy_changes,General Government,Debt Service - State Treasurer General Government B,0.9
-56,agency_detail,General Government,General Government B State Comptroller,0.8
-57,agency_detail,General Government,State Comptroller General Government B,0.8
-58,agency_detail,General Government,General Government B State Comptroller,0.8
-59,agency_detail,General Government,State Comptroller - Miscellaneous General Government B,0.8
-60,narrative,General Government,General Government B State Comptroller - Miscellaneous,0.3
-61,narrative,General Government,State Comptroller - Miscellaneous General Government B,0.3
-62,agency_detail,General Government,General Government B State Comptroller - Fringe Benefits,0.8
-63,narrative,General Government,State Comptroller - Fringe Benefits General Government B,0.3
-64,agency_detail,General Government,General Government B State Comptroller - Fringe Benefits,0.8
-65,narrative,General Government,State Comptroller - Fringe Benefits General Government B,0.3
-66,narrative,General Government,General Government B State Comptroller - Fringe Benefits,0.3
-67,policy_changes,General Government,State Comptroller - Fringe Benefits General Government B,0.9
-68,agency_detail,General Government,General Government B Department of Revenue Services,0.8
-69,agency_detail,General Government,Department of Revenue Services General Government B,0.8
-70,agency_detail,General Government,General Government B Department of Revenue Services,0.8
-71,agency_detail,General Government,Office of Policy and Management General Government B,0.8
-72,narrative,General Government,General Government B Office of Policy and Management,0.3
-73,narrative,General Government,Office of Policy and Management General Government B,0.3
-74,policy_changes,General Government,General Government B Office of Policy and Management,0.9
-75,narrative,General Government,Office of Policy and Management General Government B,0.3
-76,policy_changes,General Government,General Government B Office of Policy and Management,0.9
-77,policy_changes,General Government,Office of Policy and Management General Government B,0.9
-78,agency_detail,General Government,General Government B Office of Policy and Management,0.8
-79,agency_detail,General Government,Reserve for Salary Adjustments General Government B,0.8
-80,narrative,General Government,General Government B Reserve for Salary Adjustments,0.3
-81,agency_detail,General Government,Department of Administrative Services General Government B,0.8
-82,agency_detail,General Government,General Government B Department of Administrative Services,0.8
-83,agency_detail,General Government,Department of Administrative Services General Government B,0.8
-84,agency_detail,General Government,General Government B Department of Administrative Services,0.8
-85,agency_detail,General Government,Department of Administrative Services General Government B,0.8
-86,narrative,General Government,General Government B Department of Administrative Services,0.3
-87,agency_detail,General Government,Department of Administrative Services General Government B,0.8
-88,agency_detail,General Government,General Government B Workers’ Compensation Claims - Administrative Services,0.8
-89,narrative,General Government,Workers’ Compensation Claims - Administrative Services General Government B,0.3
-90,agency_detail,General Government,General Government B Attorney General,0.8
-91,agency_detail,General Government,Attorney General Government B,0.8
-92,agency_detail,General Government,General Government B Attorney General,0.8
+49,narrative,General Government,,0.3
+50,policy_changes,General Government,,0.9
+51,narrative,General Government,,0.3
+52,agency_detail,General Government,State Treasurer,0.8
+53,narrative,General Government,State Treasurer,0.3
+54,policy_changes,General Government,Debt Service - State Treasurer,0.9
+55,policy_changes,General Government,Debt Service - State Treasurer,0.9
+56,agency_detail,General Government,State Comptroller,0.8
+57,agency_detail,General Government,State Comptroller,0.8
+58,agency_detail,General Government,State Comptroller,0.8
+59,agency_detail,General Government,State Comptroller - Miscellaneous,0.8
+60,narrative,General Government,State Comptroller - Miscellaneous,0.3
+61,narrative,General Government,State Comptroller - Miscellaneous,0.3
+62,agency_detail,General Government,State Comptroller - Fringe Benefits,0.8
+63,narrative,General Government,State Comptroller - Fringe Benefits,0.3
+64,agency_detail,General Government,State Comptroller - Fringe Benefits,0.8
+65,narrative,General Government,State Comptroller - Fringe Benefits,0.3
+66,narrative,General Government,State Comptroller - Fringe Benefits,0.3
+67,policy_changes,General Government,State Comptroller - Fringe Benefits,0.9
+68,agency_detail,General Government,Department of Revenue Services,0.8
+69,agency_detail,General Government,Department of Revenue Services,0.8
+70,agency_detail,General Government,Department of Revenue Services,0.8
+71,agency_detail,General Government,Office of Policy and Management,0.8
+72,narrative,General Government,Office of Policy and Management,0.3
+73,narrative,General Government,Office of Policy and Management,0.3
+74,policy_changes,General Government,Office of Policy and Management,0.9
+75,narrative,General Government,Office of Policy and Management,0.3
+76,policy_changes,General Government,Office of Policy and Management,0.9
+77,policy_changes,General Government,Office of Policy and Management,0.9
+78,agency_detail,General Government,Office of Policy and Management,0.8
+79,agency_detail,General Government,Reserve for Salary Adjustments,0.8
+80,narrative,General Government,Reserve for Salary Adjustments,0.3
+81,agency_detail,General Government,Department of Administrative Services,0.8
+82,agency_detail,General Government,Department of Administrative Services,0.8
+83,agency_detail,General Government,Department of Administrative Services,0.8
+84,agency_detail,General Government,Department of Administrative Services,0.8
+85,agency_detail,General Government,Department of Administrative Services,0.8
+86,narrative,General Government,Department of Administrative Services,0.3
+87,agency_detail,General Government,Department of Administrative Services,0.8
+88,agency_detail,General Government,Workers’ Compensation Claims - Administrative Services,0.8
+89,narrative,General Government,Workers’ Compensation Claims - Administrative Services,0.3
+90,agency_detail,General Government,Attorney General,0.8
+91,agency_detail,General Government,Attorney General,0.8
+92,agency_detail,General Government,Attorney General,0.8
 93,agency_detail,Regulation And Protection,Regulation and Protection,0.8
 94,agency_detail,Regulation And Protection,Regulation and Protection Department of Emergency Services and Public Protection,0.8
 95,agency_detail,Regulation And Protection,Department of Emergency Services and Public Protection Regulation and Protection,0.8
@@ -280,43 +280,43 @@ page_number,page_type,subcommittee,agency,confidence
 296,agency_detail,,Veterans’ and Military Affairs Military Department,0.8
 297,narrative,,Military Department Veterans’ and Military Affairs,0.3
 298,narrative,,Veterans’ and Military Affairs Military Department,0.3
-299,policy_changes,,Part III. Revenue,0.9
-300,policy_changes,,Part III. Revenue,0.9
-301,policy_changes,,Part III. Revenue,0.9
-302,narrative,Transportation,Part III. Revenue,0.3
-303,narrative,,Part III. Revenue,0.3
-304,narrative,,Part III. Revenue,0.3
-305,narrative,,Part III. Revenue,0.3
-306,narrative,,Part III. Revenue,0.3
-307,policy_changes,,Part III. Revenue,0.9
-308,policy_changes,,Part III. Revenue,0.9
-309,policy_changes,,Part III. Revenue,0.9
-310,policy_changes,General Government,Part III. Revenue,0.9
-311,policy_changes,,Part III. Revenue,0.9
-312,policy_changes,,Part III. Revenue,0.9
-313,policy_changes,,Part III. Revenue,0.9
-314,policy_changes,,Part III. Revenue,0.9
-315,policy_changes,,Part III. Revenue,0.9
-316,policy_changes,,Part III. Revenue,0.9
-317,narrative,,Part III. Revenue,0.3
-318,policy_changes,,Part III. Revenue,0.9
-319,narrative,Transportation,Part III. Revenue,0.3
-320,narrative,Transportation,Part III. Revenue,0.3
-321,narrative,Transportation,Part IV. Capital Budget,0.3
-322,agency_detail,,Part IV. Capital Budget,0.8
-323,narrative,Transportation,Part IV. Capital Budget,0.3
-324,narrative,,Part IV. Capital Budget,0.3
-325,narrative,,Part IV. Capital Budget,0.3
-326,narrative,Transportation,Part IV. Capital Budget,0.3
-327,narrative,,Part IV. Capital Budget,0.3
-328,narrative,,Part IV. Capital Budget,0.3
-329,narrative,Transportation,Part IV. Capital Budget,0.3
-330,policy_changes,Higher Education,Part IV. Capital Budget,0.9
-331,policy_changes,,Part IV. Capital Budget,0.9
-332,policy_changes,,Part V. Municipal Aid,0.9
-333,narrative,Transportation,Part V. Municipal Aid,0.3
-334,narrative,,Part V. Municipal Aid,0.3
-335,narrative,Transportation,Part V. Municipal Aid,0.3
+299,policy_changes,,Table 1. Revenue Impact of Policy Changes included in the FRB Revenue Schedule,0.9
+300,policy_changes,,Category &,0.9
+301,policy_changes,,Category &,0.9
+302,narrative,Transportation,Category &,0.3
+303,narrative,,Category &,0.3
+304,narrative,,Category &,0.3
+305,narrative,,FY 26 and FY 27 Revenue Schedule – General Fund,0.3
+306,narrative,,January Governor Consensus April Legislative Revenue,0.3
+307,policy_changes,,Policies Details – General Fund,0.9
+308,policy_changes,,"Governor: Repeal the $2.5 million aggregate maximum tax i.e., cap. Section 2 of the Governor's SB 1246, AAC Revenue Items to",0.9
+309,policy_changes,,Adjust the Film Production Tax Credit,0.9
+310,policy_changes,General Government,Governor: Adjust the accounting for two minor tax types (tobacco products and controlling interest real estate conveyances) to better,0.9
+311,policy_changes,,Health Provider,0.9
+312,policy_changes,,Legislative Revenue: Authorize the University of Connecticut to establish and administer a tax credit incentive program in support of,0.9
+313,policy_changes,,Earned Income Tax Credit,0.9
+314,policy_changes,,Eliminate Certain Occupational License Application Fees,0.9
+315,policy_changes,,Reflect Federal Revenue Impact of Other Expenditure Changes,0.9
+316,policy_changes,,Support the New Bottle Bill Escheats Enforcement and Assistance Account,0.9
+317,narrative,,Credit Revenues to Subsequent Fiscal Year – Support Additional Teachers Retirement System (TRS),0.3
+318,policy_changes,,Volatility Cap Adjustment,0.9
+319,narrative,Transportation,FY 26 and FY 27 Revenue Schedule – Special Transportation Fund,0.3
+320,narrative,Transportation,Policies Details - Special Transportation Fund,0.3
+321,narrative,Transportation,"PA 25-174, the 2025 bond act, increases General Obligation (GO) bond authorizations by a net of",0.3
+322,agency_detail,,Table 2. FY 26 GO Bonds Debt Limit Metrics,0.8
+323,narrative,Transportation,PA 25-174 Sec. Agency/Program FY 26 $ FY 27 $,0.3
+324,narrative,,PA 25-174 Sec. Agency/Program FY 26 $ FY 27 $,0.3
+325,narrative,,PA 25-174 Sec. Agency/Program FY 26 $ FY 27 $,0.3
+326,narrative,Transportation,PA 25-174 Sec. Agency/Program FY 26 $ FY 27 $,0.3
+327,narrative,,PA 25-174 Sec. Agency/Program FY 26 $ FY 27 $,0.3
+328,narrative,,PA 25-174 Sec. Agency/Program FY 26 $ FY 27 $,0.3
+329,narrative,Transportation,Table 4. New Special Tax Obligation (STO) Bond Authorizations,0.3
+330,policy_changes,Higher Education,"Table 6. GO Bond Cancellations or Reductions, by Authorizing Act or Statute",0.9
+331,policy_changes,,Table 7. Changes to Prior GO Authorizations Effective in FY 26 & FY 27,0.9
+332,policy_changes,,Section I. Major Changes,0.9
+333,narrative,Transportation,Section II. Synopsis,0.3
+334,narrative,,Grant or Account FY 25 FY 26 FY 27 FY 26 - FY 25 FY 27 - FY 25,0.3
+335,narrative,Transportation,Grant or Account FY 25 FY 26 FY 27 FY 26 - FY 25 FY 27 - FY 25,0.3
 336,agency_detail,,Appendix A,0.8
 337,narrative,Higher Education,Appendix A,0.3
 338,narrative,,Appendix A,0.3
@@ -341,4 +341,4 @@ page_number,page_type,subcommittee,agency,confidence
 357,narrative,Higher Education,Appendix J,0.3
 358,narrative,Transportation,Appendix K,0.3
 359,narrative,Higher Education,AGENCY INDEX,0.3
-360,narrative,,"Women, Children, Seniors, Equity and Opportunity, Commission on ................................................................................ 28",0.3
+360,narrative,,,0.3

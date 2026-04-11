@@ -121,6 +121,18 @@ def clean_agency_name(text: str | None) -> Optional[str]:
         "General Government A",
         "General Government B",
     ]
+    non_agency_exact = {
+        "special transportation fund",
+        "actual appropriation governor recommended",
+        "governor recommended legislative difference from governor",
+    }
+    non_agency_prefixes = (
+        "the budget includes gross appropriations",
+    )
+    legislative_prefix_whitelist = (
+        "auditors of public accounts",
+        "commission on ",
+    )
 
     # Normalize unicode punctuation noise first
     text = normalize_whitespace(text)
@@ -153,6 +165,13 @@ def clean_agency_name(text: str | None) -> Optional[str]:
             text = re.sub(r"\s+Legislative\.?$", "", text, flags=re.IGNORECASE)
             text = normalize_whitespace(text)
 
+    # Remove leading "Legislative " for whitelisted agency names
+    if text.lower().startswith("legislative "):
+        remainder = text[len("Legislative "):].strip()
+        lowered_remainder = remainder.lower()
+        if any(lowered_remainder.startswith(prefix) for prefix in legislative_prefix_whitelist):
+            text = remainder
+
     # De-dupe consecutive words (case-insensitive)
     words = text.split()
     deduped: List[str] = []
@@ -160,6 +179,12 @@ def clean_agency_name(text: str | None) -> Optional[str]:
         if not deduped or deduped[-1].lower() != w.lower():
             deduped.append(w)
     text = " ".join(deduped).strip()
+
+    lowered_text = text.lower()
+    if lowered_text in non_agency_exact:
+        return None
+    if any(lowered_text.startswith(prefix) for prefix in non_agency_prefixes):
+        return None
 
     # Return None if result is empty or lacks alphabetic characters
     if not text or not re.search(r"[A-Za-z]", text):
@@ -238,6 +263,8 @@ def _dedupe_words_ci(text: str) -> str:
 
 
 def detect_agency(text: str) -> Optional[str]:
+    text = normalize_page_text(text)
+
     def is_valid_candidate(line: str) -> bool:
         if not line:
             return False
